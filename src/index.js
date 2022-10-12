@@ -47,26 +47,35 @@ function createTabElement(idName, content){
 function updateCurrentTab(newSelectedId){
     console.log("update current tab");
 
-    document.getElementById(currentTabId).rem
+    console.log(currentTabId);
+    document.getElementById(currentTabId).classList.remove('tab-selected');
+    document.getElementById(newSelectedId).classList.add('tab-selected');
+    currentTabId = newSelectedId;
+    console.log(currentTabId);
+    return;
 
     // remove .tab-selected class from the previous selected tab 
     // add .tab-selected class to new selected id.
 }
 
+let currentTabId = "home-div";
 initializeHome();
-let currentTabId = "#home-div";
+
 
 const homeBtn = document.querySelector('#home-div');
 homeBtn.addEventListener('click',() => {
-    homeContent("menu-div");
+    updateCurrentTab("home-div")
+    homeContent();
 });
 
 const menuBtn = document.querySelector('#menu-div');
-menuBtn.addEventListener('click',()=>{
-    console.log('menu tab clicked');
+menuBtn.addEventListener('click',() =>{
+    updateCurrentTab("menu-div")
+    menuContent();
 });
 
 const contactBtn = document.querySelector('#contact-div');
 contactBtn.addEventListener('click',()=>{
-    console.log('contact tab clicked');
+    updateCurrentTab("contact-div")
+    contactContent();
 });

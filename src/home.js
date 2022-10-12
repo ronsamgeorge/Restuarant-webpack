@@ -1,7 +1,5 @@
 
 
-export default function homeContent(currentSelected){
+export default function homeContent(){
     console.log("printing from inside homeContent");
-    console.log(currentSelected);
-    document.getElementById('home-div').classList.add('tab-selected');
 }
