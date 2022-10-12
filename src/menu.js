@@ -1,4 +1,6 @@
 export default function menuContent(){
+
+    //checks if content available on the page, if yes it removes it and updates content
     if(document.contains(document.getElementById('content-info-div'))){
         document.getElementById('content-info-div').remove();
     }

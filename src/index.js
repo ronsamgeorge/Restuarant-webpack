@@ -13,6 +13,8 @@ const initializeHome = () =>{
 
     const tabElementDiv = createTabMenu();
     contentDiv.appendChild(tabElementDiv);
+    homeContent();
+    updateCurrentTab(currentTabId);
     return;
 
 }
