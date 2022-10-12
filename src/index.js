@@ -2,6 +2,8 @@ import homeContent from './home.js'
 import menuContent from './menu.js';
 import contactContent from './contact.js';
 
+
+//initialize the intro page, HOME PAGE will open by default
 const initializeHome = () =>{
 
     const contentDiv = document.getElementById('content');
@@ -9,15 +11,13 @@ const initializeHome = () =>{
     mainHeader.textContent = "SummerSalt Bakery";
     contentDiv.appendChild(mainHeader);
 
-    const tabElementDiv = tabMenu();
+    const tabElementDiv = createTabMenu();
     contentDiv.appendChild(tabElementDiv);
-
-    updateCurrentTab(currentTabId);
     return;
 
 }
 
-function tabMenu(){
+function createTabMenu(){
     const tabElementDiv = document.createElement('div');
     tabElementDiv.id = 'tabs-div';
 
